@@ -1,0 +1,18 @@
+section {
+  background-color: blue;
+  height: 100vh; }
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #333;
+  height: 2.5rem; }
+
+#hero {
+  background: url(../assets/duona.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
