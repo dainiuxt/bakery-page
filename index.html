@@ -5,19 +5,87 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/main.css">
   <title>Bakery</title>
 </head>
 <body>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Home</a>
-    <a href="#">Home</a>
-    <a href="#">Home</a>
-    <a href="#">Home</a>
-  </nav>
-  <section id="hero"></section>
+  <header>
+    <a class="logo" title="Go to homepage" href="/">Gustoso</a>
+    <nav id="primary">
+      <label for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+      <input type="checkbox" id="menu-toggle">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li class="separate">~</li>
+        <li><a href="#art">Chef</a></li>
+        <li class="separate">~</li>
+        <li><a href="#pancakes">Pancakes</a></li>
+        <li class="separate">~</li>
+        <li><a href="#breakfast">Breakfast</a></li>
+        <li class="separate">~</li>
+        <li><a href="#sandwitch">Sandwitch</a></li>
+      </ul>
+    </nav>
+    <ul class="social">
+      <li>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </li>
+    </ul>
+  </header>
+
+  <section id="hero">
+    <h2>Pastry with love</h2>
+    <img src="assets/wave.png" alt="dashed wawy line" class="wave">
+    <div class="bring">We’re bringing you fresh ingredients every day in ways you can’t resist!</div>
+    <a class="menu" href="#breakfast">Our menu</a>
+  </section>
+  <section class="separator">
+    <img src="assets/border.png" alt="divider">
+  </section>
+  <section id="art">
+    <div class="left">
+      <h3>Art of cakes</h3>
+      <h4>we create delicious memories</h4>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aspernatur explicabo magnam, pariatur voluptates aliquam ab ratione iusto doloribus obcaecati nihil consequatur veniam repellendus veritatis?</p>
+      <h4>Chef Cook</h4>
+      <div class="chef">
+        <div class="name">Benito</div>
+        <div><img src="assets/benito.png" alt="Chef Benito Gaspare"></div>
+        <div class="name">Gaspare</div>
+      </div>
+      <div class="quote">
+        Unique creations for unique occasions.
+      </div>
+    </div>
+    <div class="right">
+      <!-- Right turėtų būti relative, img -->
+      <img src="assets/flour.png" alt="flour">
+      <img src="assets/egg.png" alt="eggs">
+      <img src="assets/cake.png" alt="chocko cake">
+      <img src="assets/strawberry.png" alt="strawberries">
+      <div class="cake-label"><p>Tastes so good!</p></div>
+    </div>
+  </section>
   <section id="pancakes"></section>
+  <section id="breakfast"></section>
+  <section id="sandwitch"></section>
+  <footer>
+    <nav id="secondary">
+      <a href="#">Home</a>
+      <a href="#">Home</a>
+      <a href="#">Home</a>
+      <a href="#">Home</a>
+      <a href="#">Home</a>
+    </nav>
+  </footer>
+
   <script src="index.js"></script>
 </body>
 </html>

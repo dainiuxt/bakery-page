@@ -1,18 +1,269 @@
-section {
-  background-color: blue;
-  height: 100vh; }
-
-nav {
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alegreya&family=Playfair+Display:wght@600&display=swap");
+header {
   position: fixed;
+  display: flex;
+  justify-content: space-around;
   top: 0;
   width: 100%;
   overflow: hidden;
-  background-color: #333;
-  height: 2.5rem; }
+  background-color: rgba(3, 3, 4, 0.4);
+  z-index: 99; }
+  header a {
+    text-decoration: none;
+    color: #fff; }
+
+.logo, #primary, .social {
+  align-self: center; }
+
+.logo {
+  line-height: 5rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem; }
+
+nav ul {
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0; }
+  nav ul li {
+    margin: 0;
+    text-transform: uppercase;
+    padding-right: 1rem;
+    font-family: 'Alegreya SC', serif;
+    font-size: 1.2rem; }
+    nav ul li a:link {
+      color: #fff; }
+      nav ul li a:link:hover {
+        text-decoration: none; }
+
+.separate {
+  color: #fff; }
+
+[for="menu-toggle"] {
+  color: #fff;
+  cursor: pointer; }
+  [for="menu-toggle"]:hover {
+    text-decoration: underline; }
+
+#menu-toggle {
+  display: none; }
+  #menu-toggle:checked + ul {
+    display: flex; }
+
+.social li {
+  display: inline;
+  list-style: none;
+  padding-right: 0.7rem; }
+
+@media screen and (min-width: 730px) {
+  [for="menu-toggle"] {
+    display: none; }
+  nav ul {
+    display: flex;
+    flex-direction: row; } }
+
+@media screen and (max-width: 730px) {
+  .separate {
+    display: none; } }
+
+@media screen and (max-width: 990px) {
+  .social {
+    display: none; } }
 
 #hero {
-  background: url(../assets/duona.png) no-repeat center center fixed;
+  min-height: 100vh;
+  background: url(../assets/hero.png) no-repeat center center;
+  box-shadow: inset 0 0 0 1000px rgba(69, 70, 53, 0.3);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #fff; }
+  #hero h2 {
+    font-size: 4rem;
+    align-self: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.15em;
+    text-align: center; }
+
+.wave {
+  height: 0.9rem;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.bring {
+  align-self: center;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.25em;
+  width: 50%;
+  text-align: center;
+  line-height: 2.5rem; }
+
+.menu {
+  width: fit-content;
+  align-self: center;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  padding: 1rem;
+  background-color: rgba(3, 3, 4, 0.3);
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif; }
+  .menu:hover {
+    background-color: rgba(3, 3, 4, 0.6); }
+
+.separator {
+  border: 0;
+  height: 81px;
+  width: 100%;
+  position: relative;
+  margin-top: -35px;
+  text-align: center; }
+  .separator img {
+    width: 100%; }
+
+.chef {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Alegreya', serif;
+  font-size: 3rem;
+  color: #555; }
+  .chef img {
+    margin: 0 2rem;
+    border-radius: 50%; }
+
+.name {
+  border-top: #555 solid 1px;
+  border-bottom: #555 solid 1px;
+  padding: 1rem 0; }
+
+.quote {
+  position: relative;
+  line-height: 5rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: #c3b091;
+  margin-top: 2rem;
+  letter-spacing: 0.3rem; }
+  .quote::before {
+    content: "“";
+    /* Real curly quotes */
+    font-size: 8rem;
+    color: #c3b091;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .quote::after {
+    content: "”";
+    /* Real curly quotes */
+    font-size: 8rem;
+    color: #c3b091;
+    position: absolute;
+    bottom: -5rem;
+    right: -2px; }
+
+#art {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin-top: -35px;
+  background-color: #fff;
+  padding: 5em; }
+  #art .left, #art .right {
+    width: 50%; }
+  #art .left h3 {
+    font-family: 'Alegreya', serif;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px; }
+  #art .left h4 {
+    font-family: 'Alegreya', serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: #c3b091;
+    text-align: center;
+    margin-top: 0; }
+  #art .left p {
+    font-family: 'Alegreya', serif;
+    text-align: center;
+    font-size: 2rem;
+    color: #555; }
+  #art .right {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; }
+    #art .right img {
+      margin: 2%;
+      width: 46%;
+      object-fit: cover;
+      outline: 5px solid #fff;
+      outline-offset: -1rem;
+      aspect-ratio: 1/1; }
+    #art .right .cake-label {
+      background: url(../assets/label.png) no-repeat center center;
+      display: flex;
+      justify-content: center;
+      font-family: 'Alegreya', serif;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 2em;
+      color: #c3b091;
+      text-transform: uppercase;
+      height: 36%;
+      width: 36%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      overflow: visible;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+
+@media screen and (max-width: 860px) {
+  #art {
+    flex-direction: column; }
+    #art .left, #art .right {
+      width: 100%; } }
+
+#pancakes {
+  min-height: 100vh;
+  background: url(../assets/pancakes.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+#breakfast {
+  min-height: 100vh;
+  background: url(../assets/breakfast.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#sandwitch {
+  min-height: 100vh;
+  background-color: bisque; }
+
+footer {
+  background-color: bisque; }
