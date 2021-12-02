@@ -288,11 +288,13 @@ nav {
   justify-content: center;
   align-items: center;
   .container {
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    // height: 70%;
     display: flex;
     flex-direction: row;
-    margin: 2em 0;
+    margin: 10% 0;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
     .left {
       width: 40%;
       position: relative;
@@ -301,7 +303,7 @@ nav {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
+      // clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
       &::after {
         content: '';
         position: absolute;
@@ -324,10 +326,10 @@ nav {
       }
     }
     .right {
-      background: #fff;
       width: 60%;
       padding: 1em;
       height: fit-content;
+      background: url(../assets/webp/windmill.webp) no-repeat bottom right;
       h3 {
         font-family: 'Alegreya', serif;
         font-size: 4rem;
@@ -350,57 +352,38 @@ nav {
         text-align: center;
         font-size: 2rem;
         color: #555;
-        margin-bottom: 2em;
       }
-      .minislider{
-        width: 80%;
-        position: relative;
-        transform: translate(-50%,-50%);
-        top: 10%;
-        left: 50%;
-        overflow: hidden;
-        .wrapper{
-          width: 100%;
-          display: flex;
-          animation: slide 16s infinite;
+      .carousel {
+        margin-bottom: 2em;
+        .flickity-page-dots {
+          display: none;
         }
-        @keyframes slide {
-          0%{
-            transform: translateX(0);
+        .flickity-viewport {
+          .flickity-slider {
+            display: flex;
+            align-items: center;
+            .carousel-cell {
+              width: 28%;
+              height: 130px;
+              margin-left: 10px;
+              display: flex;
+              align-items: center;
+              img {
+                height: 100%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 50%;
+                padding: 0 2px;
+                justify-self: center;
+              }
+            }
           }
-          25%{
-            transform: translateX(0);
-          }
-          30%{
-            transform: translateX(-100%);
-          }
-          50%{
-            transform: translateX(-100%);
-          }
-          55%{
-            transform: translateX(-200%);
-          }
-          75%{
-            transform: translateX(-200%);
-          }
-          80%{
-            transform: translateX(-300%);
-          }
-          100%{
-            transform: translateX(-300%);
-          }
-        }
-        img {
-          width: 100%;
-          aspect-ratio: 1/1;
-          object-fit: cover;
-          border-radius: 50%;
-          padding: 0 2px;
         }
       }
     }
   }
 }
+
 
 #breakfast {
   min-height: 100vh;

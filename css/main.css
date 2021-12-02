@@ -245,11 +245,12 @@ nav ul {
   justify-content: center;
   align-items: center; }
   #pancakes .container {
-    width: 80%;
-    height: 80%;
+    width: 70%;
     display: flex;
     flex-direction: row;
-    margin: 2em 0; }
+    margin: 10% 0;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs))); }
     #pancakes .container .left {
       width: 40%;
       position: relative;
@@ -257,8 +258,7 @@ nav ul {
       text-align: left;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs))); }
+      justify-content: space-between; }
       #pancakes .container .left::after {
         content: '';
         position: absolute;
@@ -278,10 +278,10 @@ nav ul {
         justify-content: center;
         object-fit: cover; }
     #pancakes .container .right {
-      background: #fff;
       width: 60%;
       padding: 1em;
-      height: fit-content; }
+      height: fit-content;
+      background: url(../assets/webp/windmill.webp) no-repeat bottom right; }
       #pancakes .container .right h3 {
         font-family: 'Alegreya', serif;
         font-size: 4rem;
@@ -301,43 +301,27 @@ nav ul {
         font-family: 'Alegreya', serif;
         text-align: center;
         font-size: 2rem;
-        color: #555;
+        color: #555; }
+      #pancakes .container .right .carousel {
         margin-bottom: 2em; }
-      #pancakes .container .right .minislider {
-        width: 80%;
-        position: relative;
-        transform: translate(-50%, -50%);
-        top: 10%;
-        left: 50%;
-        overflow: hidden; }
-        #pancakes .container .right .minislider .wrapper {
-          width: 100%;
+        #pancakes .container .right .carousel .flickity-page-dots {
+          display: none; }
+        #pancakes .container .right .carousel .flickity-viewport .flickity-slider {
           display: flex;
-          animation: slide 16s infinite; }
-
-@keyframes slide {
-  0% {
-    transform: translateX(0); }
-  25% {
-    transform: translateX(0); }
-  30% {
-    transform: translateX(-100%); }
-  50% {
-    transform: translateX(-100%); }
-  55% {
-    transform: translateX(-200%); }
-  75% {
-    transform: translateX(-200%); }
-  80% {
-    transform: translateX(-300%); }
-  100% {
-    transform: translateX(-300%); } }
-        #pancakes .container .right .minislider img {
-          width: 100%;
-          aspect-ratio: 1/1;
-          object-fit: cover;
-          border-radius: 50%;
-          padding: 0 2px; }
+          align-items: center; }
+          #pancakes .container .right .carousel .flickity-viewport .flickity-slider .carousel-cell {
+            width: 28%;
+            height: 130px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center; }
+            #pancakes .container .right .carousel .flickity-viewport .flickity-slider .carousel-cell img {
+              height: 100%;
+              aspect-ratio: 1/1;
+              object-fit: cover;
+              border-radius: 50%;
+              padding: 0 2px;
+              justify-self: center; }
 
 #breakfast {
   min-height: 100vh;

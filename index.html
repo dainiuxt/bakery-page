@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Great+Vibes&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"> 
@@ -89,17 +90,13 @@
         <h3>Tasty pancakes</h3>
         <h4>Season favourite</h4>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aspernatur explicabo magnam, pariatur voluptates aliquam ab ratione iusto doloribus obcaecati nihil consequatur veniam repellendus veritatis?</p>
-        <div class="minislider">
-          <div class="wrapper">
-            <img src="https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg">
-            <img src="https://images6.alphacoders.com/462/thumb-1920-462371.jpg">
-            <img src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg">
-            <img src="https://cdn.wallpapersafari.com/24/98/dwMtqD.jpg">
-            <img src="https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg">
-            <img src="https://images6.alphacoders.com/462/thumb-1920-462371.jpg">
-            <img src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg">
-            <img src="https://cdn.wallpapersafari.com/24/98/dwMtqD.jpg">
-          </div>
+        <div class="carousel">
+          <div class="carousel-cell"><img src="assets/webp/berry.webp"></div>
+          <div class="carousel-cell"><img src="assets/webp/ham.webp"></div>
+          <div class="carousel-cell"><img src="assets/webp/lettuce.webp"></div>
+          <div class="carousel-cell"><img src="assets/webp/texture.webp"></div>
+          <div class="carousel-cell"><img src="assets/webp/berry.webp"></div>
+          <div class="carousel-cell"><img src="assets/webp/ham.webp"></div>
         </div>
       </div>
       <div class="label"></div>
@@ -116,7 +113,7 @@
       <a href="#">Home</a>
     </nav>
   </footer>
-
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
