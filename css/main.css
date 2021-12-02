@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alegreya&family=Playfair+Display:wght@600&display=swap");
 header {
   position: fixed;
   display: flex;
@@ -56,21 +55,6 @@ nav ul {
   display: inline;
   list-style: none;
   padding-right: 0.7rem; }
-
-@media screen and (min-width: 730px) {
-  [for="menu-toggle"] {
-    display: none; }
-  nav ul {
-    display: flex;
-    flex-direction: row; } }
-
-@media screen and (max-width: 730px) {
-  .separate {
-    display: none; } }
-
-@media screen and (max-width: 990px) {
-  .social {
-    display: none; } }
 
 #hero {
   min-height: 100vh;
@@ -179,32 +163,36 @@ nav ul {
   min-height: 100vh;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin-top: -35px;
   background-color: #fff;
-  padding: 5em; }
+  padding: 2em; }
   #art .left, #art .right {
     width: 50%; }
-  #art .left h3 {
-    font-family: 'Alegreya', serif;
-    font-size: 4rem;
-    font-weight: 600;
-    letter-spacing: 0.5rem;
-    color: #555;
-    text-align: center;
-    margin-bottom: 20px; }
-  #art .left h4 {
-    font-family: 'Alegreya', serif;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    color: #c3b091;
-    text-align: center;
-    margin-top: 0; }
-  #art .left p {
-    font-family: 'Alegreya', serif;
-    text-align: center;
-    font-size: 2rem;
-    color: #555; }
+  #art .left {
+    padding: 0 2em; }
+    #art .left h3 {
+      font-family: 'Alegreya', serif;
+      font-size: 4rem;
+      font-weight: 600;
+      letter-spacing: 0.5rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 20px; }
+    #art .left h4 {
+      font-family: 'Alegreya', serif;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      color: #c3b091;
+      text-align: center;
+      margin-top: 0; }
+    #art .left p {
+      font-family: 'Alegreya', serif;
+      text-align: center;
+      font-size: 2rem;
+      color: #555; }
   #art .right {
+    padding: 1rem;
     display: flex;
     flex-wrap: wrap;
     position: relative; }
@@ -214,7 +202,7 @@ nav ul {
       object-fit: cover;
       outline: 5px solid #fff;
       outline-offset: -1rem;
-      aspect-ratio: 1/1; }
+      aspect-ratio: 1 / 1; }
     #art .right .cake-label {
       background: url(../assets/webp/label.png.webp) no-repeat center center;
       display: flex;
@@ -238,20 +226,118 @@ nav ul {
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain; }
+      #art .right .cake-label p {
+        margin: 0 10%; }
 
-@media screen and (max-width: 860px) {
-  #art {
-    flex-direction: column; }
-    #art .left, #art .right {
-      width: 100%; } }
+:root {
+  --cs: 55px; }
 
 #pancakes {
   min-height: 100vh;
+  height: fit-content;
   background: url(../assets/webp/pancakes.png.webp) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  #pancakes .container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: 2em 0; }
+    #pancakes .container .left {
+      width: 40%;
+      position: relative;
+      background-color: #ffffff;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs))); }
+      #pancakes .container .left::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: var(--cs);
+        height: var(--cs);
+        background-color: #fff;
+        bottom: 0;
+        left: 0; }
+      #pancakes .container .left img {
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        object-fit: cover; }
+    #pancakes .container .right {
+      background: #fff;
+      width: 60%;
+      padding: 1em;
+      height: fit-content; }
+      #pancakes .container .right h3 {
+        font-family: 'Alegreya', serif;
+        font-size: 4rem;
+        font-weight: 600;
+        letter-spacing: 0.5rem;
+        color: #555;
+        text-align: center;
+        margin-bottom: 20px; }
+      #pancakes .container .right h4 {
+        font-family: 'Alegreya', serif;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        color: #c3b091;
+        text-align: center;
+        margin-top: 0; }
+      #pancakes .container .right p {
+        font-family: 'Alegreya', serif;
+        text-align: center;
+        font-size: 2rem;
+        color: #555;
+        margin-bottom: 2em; }
+      #pancakes .container .right .minislider {
+        width: 80%;
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 10%;
+        left: 50%;
+        overflow: hidden; }
+        #pancakes .container .right .minislider .wrapper {
+          width: 100%;
+          display: flex;
+          animation: slide 16s infinite; }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0); }
+  25% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(-100%); }
+  50% {
+    transform: translateX(-100%); }
+  55% {
+    transform: translateX(-200%); }
+  75% {
+    transform: translateX(-200%); }
+  80% {
+    transform: translateX(-300%); }
+  100% {
+    transform: translateX(-300%); } }
+        #pancakes .container .right .minislider img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 50%;
+          padding: 0 2px; }
 
 #breakfast {
   min-height: 100vh;
@@ -267,3 +353,30 @@ nav ul {
 
 footer {
   background-color: bisque; }
+
+@media screen and (max-width: 1100px) {
+  .social {
+    display: none; }
+  #art {
+    flex-direction: column; }
+    #art .left, #art .right {
+      width: 100%;
+      padding: 0; }
+    #art .left {
+      margin-bottom: 2em; }
+    #art .cake-label p {
+      font-size: 1.5rem; }
+  .separator {
+    display: none; }
+  #pancakes .container .left {
+    display: none; }
+  #pancakes .container .right {
+    width: 100%;
+    margin: 2em 0; } }
+
+@media screen and (min-width: 860px) {
+  [for="menu-toggle"] {
+    display: none; }
+  nav ul {
+    display: flex;
+    flex-direction: row; } }
