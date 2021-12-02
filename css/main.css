@@ -74,7 +74,7 @@ nav ul {
 
 #hero {
   min-height: 100vh;
-  background: url(../assets/hero.png) no-repeat center center;
+  background: url(../assets/webp/hero.png.webp) no-repeat center center;
   box-shadow: inset 0 0 0 1000px rgba(69, 70, 53, 0.3);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -216,7 +216,7 @@ nav ul {
       outline-offset: -1rem;
       aspect-ratio: 1/1; }
     #art .right .cake-label {
-      background: url(../assets/label.png) no-repeat center center;
+      background: url(../assets/webp/label.png.webp) no-repeat center center;
       display: flex;
       justify-content: center;
       font-family: 'Alegreya', serif;
@@ -247,7 +247,7 @@ nav ul {
 
 #pancakes {
   min-height: 100vh;
-  background: url(../assets/pancakes.png) no-repeat center center;
+  background: url(../assets/webp/pancakes.png.webp) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -255,7 +255,7 @@ nav ul {
 
 #breakfast {
   min-height: 100vh;
-  background: url(../assets/breakfast.png) no-repeat center center;
+  background: url(../assets/webp/breakfast.png.webp) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
