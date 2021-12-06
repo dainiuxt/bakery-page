@@ -48,7 +48,7 @@
   </header>
 
   <section id="hero">
-    <h2>Pastry with love</h2>
+    <h1>Pastry with love</h1>
     <img src="assets/webp/wave.png.webp" alt="dashed wawy line" class="wave">
     <div class="bring">We’re bringing you fresh ingredients every day in ways you can’t resist!</div>
     <a class="menu" href="#breakfast">Our menu</a>
@@ -85,8 +85,7 @@
       <div class="left">
         <img src="assets/webp/pancakes-with-jam.webp" alt="Pancakes with jam">
       </div>
-      
-      <div class="right">
+      <div class="right clearfix">
         <h3>Tasty pancakes</h3>
         <h4>Season favourite</h4>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aspernatur explicabo magnam, pariatur voluptates aliquam ab ratione iusto doloribus obcaecati nihil consequatur veniam repellendus veritatis?</p>
@@ -99,18 +98,60 @@
           <div class="carousel-cell"><img src="assets/webp/ham.webp"></div>
         </div>
       </div>
-      <div class="label"></div>
+      <div class="label">
+        <div class="ready40">
+          <span class="ready">Ready in</span><br><span>40</span><br>minutes
+        </div>
+      </div>
     </div>
   </section>
-  <section id="breakfast"></section>
+  <section id="breakfast">
+    <div class="left">
+      <h3>Breakfast</h3>
+      <h4>7AM breakfast? We're open!</h4>
+      <p class="menu-item">Full breakfast</p>
+      <p class="description">Lorem ipsum dolor sit amet.</p>
+      <p class="price">€8.49</p>
+      <img src="assets/webp/divider.webp" alt="small divider">
+      <p class="menu-item">Toast & Jam</p>
+      <p class="description">Lorem ipsum dolor sit amet.</p>
+      <p class="price">€4.49</p>
+      <img src="assets/webp/divider.webp" alt="small divider">
+      <p class="menu-item">Muffins</p>
+      <p class="description">Lorem ipsum dolor sit amet.</p>
+      <p class="price">€2.49</p>
+
+    </div>
+    <div class="right">
+      <div class="container">
+        <div>EST.</div>
+        <div>1893</div>
+      </div>
+      <h3>Your Morning<br>Escape with Flair</h3>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed at, est sint itaque architecto quae, modi quisquam aut cumque aspernatur corrupti nesciunt culpa commodi obcaecati.
+    </div>
+
+  </section>
   <section id="sandwitch"></section>
   <footer>
     <nav id="secondary">
-      <a href="#">Home</a>
-      <a href="#">Home</a>
-      <a href="#">Home</a>
-      <a href="#">Home</a>
-      <a href="#">Home</a>
+      <!-- <label for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+      <input type="checkbox" id="menu-toggle"> -->
+      <ul>
+        <li><a href="#">Our menu</a></li>
+        <li class="separate">~</li>
+        <li><a href="#">Gallery</a></li>
+        <li class="separate">~</li>
+        <li><a href="#">Culture</a></li>
+      </ul>
+      <a href="#" class="logo">Gustoso</a>
+      <ul>
+        <li><a href="#">Events</a></li>
+        <li class="separate">~</li>
+        <li><a href="#">Cattering</a></li>
+        <li class="separate">~</li>
+        <li><a href="#">Visit us</a></li>
+      </ul>
     </nav>
   </footer>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
