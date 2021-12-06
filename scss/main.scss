@@ -81,7 +81,6 @@ nav {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  // padding-top: 5rem;
   justify-content: space-evenly;
   color: #fff;
   h1 {
@@ -113,7 +112,6 @@ nav {
 .menu {
   width: fit-content;
   align-self: center;
-  // font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.25em;
   padding: 1rem;
@@ -134,9 +132,7 @@ nav {
   height: 81px;
   width: 100%;
   position: relative;
-  // top: 50%;
   margin-top: -35px;
-  // margin-bottom: -40px;
   text-align: center;
   img {
     width: 100%;
@@ -235,7 +231,6 @@ nav {
     img {
       margin: 2%;
       width: 46%;
-      // height: 46%;
       object-fit: cover;
       outline: 5px solid #fff;
       outline-offset: -1rem;
@@ -290,67 +285,18 @@ nav {
   position: relative;
   .container {
     width: 70%;
-    // height: 70%;
     display: flex;
     flex-direction: row;
     margin: 10% 0;
-    background: #fff;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
     position: relative;
-    overflow: hidden;
-    .label {
-      border: solid 1px #000;
-      height: 200px;
-      width: 200px;
-      display: flex;
-      background: #fff;
-      // position: absolute;
-      top: -100px;
-      right: -100px;
-      z-index: 3;
-      overflow: visible;
-      // visibility: visible;
-      // clear: both;
-      // text-overflow: ellipsis;
-      overflow: visible;
-      white-space: nowrap;
-      .ready40 {
-        background: url(../assets/webp/ready40bg.webp) no-repeat center center;
-        background-size: cover;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 2em;
-        color: #816130;
-        // text-transform: uppercase;
-        overflow: visible;
-        // position: static;
-        // top: -50px;
-        .ready {
-          text-transform: uppercase;
-          font-size: 1.2em;
-        }
-        span {
-          font-family: 'Alegreya', serif;
-          font-size: 3em;
-          color: #a17737;
-        }
-      }
-    }
     .left {
       width: 40%;
       position: relative;
-      background-color: #ffffff;
       text-align: left;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      // clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
+      clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
       &::after {
         content: '';
         position: absolute;
@@ -372,30 +318,43 @@ nav {
         object-fit: cover;
       }
     }
-    // .clearfix:before,
-    // .clearfix:after {
-    //     content: ".";    
-    //     display: block;    
-    //     height: 0;    
-    //     overflow: hidden; 
-    // }
-    // .clearfix:after { clear: both; }
-    // .clearfix { zoom: 1; } /* IE < 8 */
     .right {
       width: 60%;
-      padding: 1em;
-      // display: flex;
+      padding: 2em;
       height: fit-content;
-      position: relative;
-      background: url(../assets/webp/windmill.webp) no-repeat bottom right;
-      // overflow: visible;
+      overflow: hidden;
+      background: #fff url(../assets/webp/windmill.webp) no-repeat bottom right;
+      // padding: 0 10px;
+      .ready40 {
+        position: absolute;
+        font-family: 'Alegreya', serif;
+        height: 200px;
+        width: 200px;
+        top: -50px;
+        right: -80px;
+        background: #fff url(../assets/webp/ready40bg.webp) no-repeat center center;
+        background-size: cover;
+        text-align: center;
+        font-size: 2em;
+        color: #816130;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        .ready {
+          text-transform: uppercase;
+          font-size: 1.2em;
+        }
+        span {
+          font-family: 'Alegreya', serif;
+          font-size: 3em;
+          color: #a17737;
+        }
+      }
       h3 {
         font-family: 'Alegreya', serif;
         font-size: 4rem;
         font-weight: 600;
-        letter-spacing: 0.5rem;
+        // letter-spacing: 0.5rem;
         color: #555;
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px;
       }
       h4 {
@@ -403,7 +362,7 @@ nav {
         font-size: 1.7rem;
         text-transform: uppercase;
         color: #c3b091;
-        text-align: center;
+        text-align: left;
         margin-top: 0;
       }
       p {
@@ -494,10 +453,6 @@ nav {
     padding: 0 9em;
     background: url(../assets/webp/morning-escape-bg.webp) center center no-repeat;
     height: 100%;
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-    // background-size: cover;
     .container {
       display: flex;
       flex-direction: row;
@@ -568,11 +523,11 @@ footer {
   .social {
     display: none;
   }
-  footer {
-    .logo {
-      display: none;
-    }
-  }
+  // footer {
+  //   .logo {
+  //     display: none;
+  //   }
+  // }
   #art {
     flex-direction: column;
     .left, .right {
@@ -611,6 +566,11 @@ footer {
   }
 }
 
+@media screen and (max-width: 860px) {
+  .ready40 {
+    display: none;
+  }
+}
 @media screen and (min-width: 860px) {
   [for="menu-toggle"] {
     display: none;

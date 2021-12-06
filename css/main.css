@@ -250,51 +250,15 @@ nav ul {
     display: flex;
     flex-direction: row;
     margin: 10% 0;
-    background: #fff;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
-    position: relative;
-    overflow: hidden; }
-    #pancakes .container .label {
-      border: solid 1px #000;
-      height: 200px;
-      width: 200px;
-      display: flex;
-      background: #fff;
-      top: -100px;
-      right: -100px;
-      z-index: 3;
-      overflow: visible;
-      overflow: visible;
-      white-space: nowrap; }
-      #pancakes .container .label .ready40 {
-        background: url(../assets/webp/ready40bg.webp) no-repeat center center;
-        background-size: cover;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 2em;
-        color: #816130;
-        overflow: visible; }
-        #pancakes .container .label .ready40 .ready {
-          text-transform: uppercase;
-          font-size: 1.2em; }
-        #pancakes .container .label .ready40 span {
-          font-family: 'Alegreya', serif;
-          font-size: 3em;
-          color: #a17737; }
+    position: relative; }
     #pancakes .container .left {
       width: 40%;
       position: relative;
-      background-color: #ffffff;
       text-align: left;
       display: flex;
       flex-direction: column;
-      justify-content: space-between; }
+      justify-content: space-between;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs))); }
       #pancakes .container .left::after {
         content: '';
         position: absolute;
@@ -315,24 +279,43 @@ nav ul {
         object-fit: cover; }
     #pancakes .container .right {
       width: 60%;
-      padding: 1em;
+      padding: 2em;
       height: fit-content;
-      position: relative;
-      background: url(../assets/webp/windmill.webp) no-repeat bottom right; }
+      overflow: hidden;
+      background: #fff url(../assets/webp/windmill.webp) no-repeat bottom right; }
+      #pancakes .container .right .ready40 {
+        position: absolute;
+        font-family: 'Alegreya', serif;
+        height: 200px;
+        width: 200px;
+        top: -50px;
+        right: -80px;
+        background: #fff url(../assets/webp/ready40bg.webp) no-repeat center center;
+        background-size: cover;
+        text-align: center;
+        font-size: 2em;
+        color: #816130;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; }
+        #pancakes .container .right .ready40 .ready {
+          text-transform: uppercase;
+          font-size: 1.2em; }
+        #pancakes .container .right .ready40 span {
+          font-family: 'Alegreya', serif;
+          font-size: 3em;
+          color: #a17737; }
       #pancakes .container .right h3 {
         font-family: 'Alegreya', serif;
         font-size: 4rem;
         font-weight: 600;
-        letter-spacing: 0.5rem;
         color: #555;
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px; }
       #pancakes .container .right h4 {
         font-family: 'Alegreya', serif;
         font-size: 1.7rem;
         text-transform: uppercase;
         color: #c3b091;
-        text-align: center;
+        text-align: left;
         margin-top: 0; }
       #pancakes .container .right p {
         font-family: 'Alegreya', serif;
@@ -458,8 +441,6 @@ footer {
 @media screen and (max-width: 1100px) {
   .social {
     display: none; }
-  footer .logo {
-    display: none; }
   #art {
     flex-direction: column; }
     #art .left, #art .right {
@@ -481,6 +462,10 @@ footer {
   #pancakes .container .right {
     width: 100%;
     margin: 2em 0; } }
+
+@media screen and (max-width: 860px) {
+  .ready40 {
+    display: none; } }
 
 @media screen and (min-width: 860px) {
   [for="menu-toggle"] {
