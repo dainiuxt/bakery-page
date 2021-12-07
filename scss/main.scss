@@ -27,8 +27,6 @@ nav {
   ul {
     list-style-type: none;
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
     margin: 0;
     li {
       margin: 0;
@@ -75,9 +73,6 @@ nav {
   min-height: 100vh;
   background: url(../assets/webp/hero.png.webp) no-repeat center center;
   box-shadow: inset 0 0 0 1000px rgba(69, 70, 53, 0.3); 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -274,9 +269,6 @@ nav {
   min-height: 100vh;
   height: fit-content;
   background: url(../assets/webp/pancakes.png.webp) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -311,10 +303,7 @@ nav {
         height: 100%;
         aspect-ratio: 1 / 1;
         overflow: hidden;
-        align-content: center;
-        align-items: center;
         text-align: center;
-        justify-content: center;
         object-fit: cover;
       }
     }
@@ -406,12 +395,10 @@ nav {
   min-height: 100vh;
   background: url(../assets/webp/breakfast.png.webp) no-repeat center center;
   box-shadow: inset 0 0 0 1000px rgba(69, 70, 53, 0.3);  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   display: flex;
   flex-direction: row;
+  position: relative;
   padding: 5em;
   .left, .right {
     width: 50%;
@@ -450,9 +437,23 @@ nav {
   }
   .right {
     color: #555;
-    padding: 0 9em;
-    background: url(../assets/webp/morning-escape-bg.webp) center center no-repeat;
-    height: 100%;
+    padding: 3em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
+    // outline: 5px dashed #555;
+    outline-offset: -1rem;
+    background: #f1f3e7 /*url(../assets/webp/morning-escape-bg.webp) center center no-repeat*/;
+    position: relative;
+    &:before {
+      content: '';
+      width: 95%;
+      height: 95%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
+      background: green;
+      display: block;
+      position: absolute;
+      top: 2.5%;
+      left: 2.5%;
+    }
     .container {
       display: flex;
       flex-direction: row;
@@ -493,7 +494,7 @@ footer {
       list-style-type: none;
       flex-direction: row;
       justify-content: space-around;
-      padding: 1.3em 0;
+      padding: 0.5em 0;
       border-top: solid #555 1px;
       border-bottom: solid #555 1px;
       .separate {
