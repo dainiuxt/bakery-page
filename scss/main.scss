@@ -127,10 +127,12 @@ nav {
   height: 81px;
   width: 100%;
   position: relative;
-  margin-top: -35px;
+  margin-bottom: -81px;
   text-align: center;
   img {
+
     width: 100%;
+    // border: #555 solid 1px;
   }
 }
 
@@ -186,11 +188,25 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: -35px;
+  // margin-top: -35px;
   background-color: #fff;
   padding: 2em;
+  position: relative;
   .left, .right {
     width: 50%;
+  }
+  &:before {
+    content: url("../assets/webp/bun.webp"); 
+    width: 6rem;
+    height: 6rem;
+    background: #fff;
+    border-radius: 100%;
+    position: absolute;
+    top: -3rem;
+    left: calc(50% - 3rem);
+    line-height: 6rem;
+    text-indent: 1.45rem;
+    font-size: 3rem;
   }
   .left {
     padding: 0 2em;
@@ -313,7 +329,6 @@ nav {
       height: fit-content;
       overflow: hidden;
       background: #fff url(../assets/webp/windmill.webp) no-repeat bottom right;
-      // padding: 0 10px;
       .ready40 {
         position: absolute;
         font-family: 'Alegreya', serif;
@@ -439,28 +454,51 @@ nav {
     color: #555;
     padding: 3em;
     clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
-    // outline: 5px dashed #555;
+    outline: 5px dashed #555;
     outline-offset: -1rem;
     background: #f1f3e7 /*url(../assets/webp/morning-escape-bg.webp) center center no-repeat*/;
     position: relative;
-    &:before {
+    &::after {
       content: '';
-      width: 95%;
-      height: 95%;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
-      background: green;
-      display: block;
       position: absolute;
-      top: 2.5%;
-      left: 2.5%;
+      display: block;
+      width: var(--cs);
+      height: var(--cs);
+      background-color: #fff;
+      bottom: 0;
+      left: 0;
+    }
+    p {
+      display: inline-block;
+      font-size: 1.5em;
+      width: 80%;
+      margin-top: 1.5em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .morebreakfast {
+      display: inline-block;
+      border: #c3b091 solid 1px;
+      padding: 1em 2em;
+      margin-top: 4em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #c3b091;
+      font-size: 1.5em;
+      font-weight: bold;
     }
     .container {
       display: flex;
       flex-direction: row;
+      border-bottom: #555 0.5px solid;
+      padding-bottom: 2em;
       div {
         width: 50%;
         font-size: 2em;
         font-weight: bold;
+      }
+      .verticaldivider {
+        font-weight: normal;
       }
     }
   }
