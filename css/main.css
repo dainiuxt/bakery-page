@@ -429,6 +429,8 @@ footer {
         margin: 0;
         text-transform: uppercase;
         padding-right: 1rem;
+        padding-top: 1em;
+        padding-bottom: 1em;
         font-family: 'Alegreya SC', serif;
         font-size: 1.2rem;
         color: #555; }
@@ -461,10 +463,52 @@ footer {
     display: none; }
   #pancakes .container .right {
     width: 100%;
-    margin: 2em 0; } }
+    margin: 2em 0; }
+  footer {
+    display: flex;
+    flex-direction: row;
+    margin: 3em 0; }
+    footer nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: #555;
+      align-items: center; }
+      footer nav .logo {
+        text-decoration: none;
+        color: #555;
+        margin: 0 1em; }
+      footer nav ul {
+        display: inline-block;
+        margin: 0 2em;
+        padding: 0;
+        border-top: solid #555 1px;
+        border-bottom: solid #555 1px; }
+        footer nav ul .separate {
+          display: none; }
+        footer nav ul li {
+          text-transform: uppercase;
+          padding-right: 0;
+          font-family: 'Alegreya SC', serif;
+          font-size: 1.2rem;
+          color: #555; }
+          footer nav ul li a:link {
+            color: #555;
+            text-decoration: none; }
+            footer nav ul li a:link:hover {
+              text-decoration: none; }
+      footer nav .right li {
+        text-align: right; }
+        footer nav .right li a:link {
+          color: #555;
+          text-decoration: none; }
+          footer nav .right li a:link:hover {
+            text-decoration: none; } }
 
 @media screen and (max-width: 860px) {
   .ready40 {
+    display: none; }
+  footer .logo {
     display: none; } }
 
 @media screen and (min-width: 860px) {
