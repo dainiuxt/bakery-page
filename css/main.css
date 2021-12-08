@@ -563,6 +563,8 @@ footer {
 @media screen and (max-width: 860px) {
   .separate {
     display: none; }
+  #breakfast .right h3 {
+    font-size: 1.2em; }
   #art .left .chef {
     flex-direction: column;
     margin-bottom: 1em; }
