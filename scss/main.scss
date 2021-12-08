@@ -18,22 +18,26 @@ header {
 }
 
 .logo {
-  line-height: 5rem;
+  line-height: 2em;
   font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
+  font-size: 2em;
 }
 
 nav {
   ul {
     list-style-type: none;
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
     margin: 0;
     li {
       margin: 0;
       text-transform: uppercase;
-      padding-right: 1rem;
+      padding-right: 1em;
       font-family: 'Alegreya SC', serif;
-      font-size: 1.2rem;
+      font-size: 1.2em;
+      padding-top: 1.2em;
+      padding-bottom: 1.2em;
       a:link {
         color: #fff;
         &:hover {
@@ -66,7 +70,7 @@ nav {
 .social li {
   display: inline;
   list-style: none;
-  padding-right: 0.7rem;
+  padding-right: 0.7em;
 }
 
 #hero {
@@ -79,7 +83,7 @@ nav {
   justify-content: space-evenly;
   color: #fff;
   h1 {
-    font-size: 4rem;
+    font-size: 4em;
     align-self: center;
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.15em;
@@ -88,7 +92,7 @@ nav {
 }
 
 .wave {
-  height: 0.9rem;
+  height: 0.9em;
   width: 20%;
   margin-left: auto;
   margin-right: auto;
@@ -96,12 +100,12 @@ nav {
 
 .bring {
   align-self: center;
-  font-size: 1.5rem;
+  font-size: 1.7em;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.25em;
   width: 50%;
   text-align: center;
-  line-height: 2.5rem;
+  line-height: 2.5em;
 }
 
 .menu {
@@ -109,7 +113,7 @@ nav {
   align-self: center;
   font-weight: 700;
   letter-spacing: 0.25em;
-  padding: 1rem;
+  padding: 1em;
   background-color: rgba(3, 3, 4, 0.3);
   border-radius: 5px;
   border: none;
@@ -122,30 +126,16 @@ nav {
   }
 }
 
-.separator {
-  border: 0;
-  height: 81px;
-  width: 100%;
-  position: relative;
-  margin-bottom: -81px;
-  text-align: center;
-  img {
-
-    width: 100%;
-    // border: #555 solid 1px;
-  }
-}
-
 .chef {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: 'Alegreya', serif;
-  font-size: 3rem;
+  font-size: 3em;
   color: #555;
   img {
-    margin: 0 2rem;
+    margin: 0 2em;
     border-radius: 50%;
   }
 }
@@ -153,21 +143,21 @@ nav {
 .name {
   border-top: #555 solid 1px;
   border-bottom: #555 solid 1px;
-  padding: 1rem 0;
+  padding: 0.3em 0;
 }
 
 .quote {
   position: relative;
-  line-height: 5rem;
+  line-height: 2em;
   font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
+  font-size: 3em;
   text-align: center;
   color: #c3b091;
-  margin-top: 2rem;
-  letter-spacing: 0.3rem;
+  margin-top: 1em;
+  letter-spacing: 0.2em;
   &::before {
     content: "“"; /* Real curly quotes */
-    font-size: 8rem;
+    font-size: 3em;
     color: #c3b091;
     position: absolute;
     left: 0;
@@ -175,11 +165,11 @@ nav {
   }
   &::after {
     content: "”"; /* Real curly quotes */
-    font-size: 8rem;
+    font-size: 3em;
     color: #c3b091;
     position: absolute;
-    bottom: -5rem;
-    right: -2px;
+    bottom: -0.5em;
+    right: 0;
   }
 }
 
@@ -197,31 +187,31 @@ nav {
   }
   &:before {
     content: url("../assets/webp/bun.webp"); 
-    width: 6rem;
-    height: 6rem;
+    width: 4em;
+    height: 4em;
     background: #fff;
     border-radius: 100%;
     position: absolute;
-    top: -3rem;
-    left: calc(50% - 3rem);
-    line-height: 6rem;
-    text-indent: 1.45rem;
-    font-size: 3rem;
+    top: -1.5em;
+    left: calc(50% - 2em);
+    line-height: 4em;
+    text-indent: 1.2em;
+    font-size: 2em;
   }
   .left {
     padding: 0 2em;
     h3 {
       font-family: 'Alegreya', serif;
-      font-size: 4rem;
+      font-size: 3em;
       font-weight: 600;
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.25em;
       color: #555;
       text-align: center;
       margin-bottom: 20px;
     }
     h4 {
       font-family: 'Alegreya', serif;
-      font-size: 1.7rem;
+      font-size: 1.5em;
       text-transform: uppercase;
       color: #c3b091;
       text-align: center;
@@ -230,12 +220,12 @@ nav {
     p {
       font-family: 'Alegreya', serif;
       text-align: center;
-      font-size: 2rem;
+      font-size: 2em;
       color: #555;
     }
   }
   .right {
-    padding: 1rem;
+    padding: 1em;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -244,7 +234,7 @@ nav {
       width: 46%;
       object-fit: cover;
       outline: 5px solid #fff;
-      outline-offset: -1rem;
+      outline-offset: -1em;
       aspect-ratio: 1 / 1;
     }
     .cake-label {
@@ -354,16 +344,15 @@ nav {
       }
       h3 {
         font-family: 'Alegreya', serif;
-        font-size: 4rem;
+        font-size: 3em;
         font-weight: 600;
-        // letter-spacing: 0.5rem;
         color: #555;
         text-align: left;
         margin-bottom: 20px;
       }
       h4 {
         font-family: 'Alegreya', serif;
-        font-size: 1.7rem;
+        font-size: 1.5em;
         text-transform: uppercase;
         color: #c3b091;
         text-align: left;
@@ -372,7 +361,7 @@ nav {
       p {
         font-family: 'Alegreya', serif;
         text-align: center;
-        font-size: 2rem;
+        font-size: 2em;
         color: #555;
       }
       .carousel {
@@ -420,9 +409,9 @@ nav {
     text-align: center;
     font-family: 'Alegreya', serif;
     h3 {
-      font-size: 3rem;
+      font-size: 3em;
       font-weight: 800;
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.25em;
     }
   }
   .left {
@@ -436,7 +425,7 @@ nav {
       font-size: 1.5em;
     }
     .menu-item {
-      font-size: 2rem;
+      font-size: 2em;
       font-weight: 800;
     }
     .description {
@@ -455,10 +444,10 @@ nav {
     padding: 3em;
     clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
     outline: 5px dashed #555;
-    outline-offset: -1rem;
-    background: #f1f3e7 /*url(../assets/webp/morning-escape-bg.webp) center center no-repeat*/;
+    outline-offset: -2em;
+    background: #f1f3e7;
     position: relative;
-    &::after {
+    &::before {
       content: '';
       position: absolute;
       display: block;
@@ -467,6 +456,15 @@ nav {
       background-color: #fff;
       bottom: 0;
       left: 0;
+    }
+    &::after {
+      content: url(../assets/webp/wheat-big.webp);
+      overflow: visible;
+      position: absolute;
+      z-index: -1;
+      display: block;
+      bottom: -10px;
+      right: -80px;
     }
     p {
       display: inline-block;
@@ -486,11 +484,17 @@ nav {
       color: #c3b091;
       font-size: 1.5em;
       font-weight: bold;
+      border-radius: 7px;
+      font-family: 'Alegreya', serif;
+      &:hover {
+        background-color: rgba(3, 3, 4, 0.3);
+        color: #ccc;
+      }
     }
     .container {
       display: flex;
       flex-direction: row;
-      border-bottom: #555 0.5px solid;
+      border-bottom: #555 0.5px dashed;
       padding-bottom: 2em;
       div {
         width: 50%;
@@ -541,12 +545,16 @@ footer {
       li {
         margin: 0;
         text-transform: uppercase;
-        padding-right: 1rem;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
         padding-top: 1em;
         padding-bottom: 1em;
         font-family: 'Alegreya SC', serif;
-        font-size: 1.2rem;
+        font-size: 1.2em;
         color: #555;
+        a {
+          color: #555;
+        }
         a:link {
           color: #555;
           text-decoration: none;
@@ -560,8 +568,11 @@ footer {
 }
 
 @media screen and (max-width: 1100px) {
-  .social {
+  .ready40, .social {
     display: none;
+  }
+  #hero {
+    padding-bottom: 3em;
   }
   #art {
     flex-direction: column;
@@ -574,28 +585,38 @@ footer {
     }
     .cake-label {
       p {
-        font-size: 1.5rem;
+        font-size: 1em;
       }
     }
   }
   #breakfast {
     flex-direction: column;
-    .left, .right {
+    padding-left: 0;
+    padding-right: 0;
+    padding: 3em;
+    width: auto;
+    .left {
       width: 100%;
       padding: 0;
     }
-  }
-  .separator {
-    display: none;
+    .right {
+      width: auto;
+      margin: 0;
+      .container {
+        margin: 2em;
+      }
+    }
   }
   #pancakes {
     .container {
+      width: 100%;
+      margin: 0;
       .left {
         display: none;
       }
       .right {
         width: 100%;
-        margin: 2em 0;
+        margin: 3em;
       }
     }
   }
@@ -626,8 +647,9 @@ footer {
         li {
           text-transform: uppercase;
           padding-right: 0;
+          padding-left: 0;
           font-family: 'Alegreya SC', serif;
-          font-size: 1.2rem;
+          font-size: 1.2em;
           color: #555;
           a:link {
             color: #555;
@@ -655,8 +677,24 @@ footer {
 }
 
 @media screen and (max-width: 860px) {
-  .ready40 {
+  .separate {
     display: none;
+  }
+  #art {
+    .left {
+      .chef {
+        flex-direction: column;
+        margin-bottom: 1em;
+        img {
+          margin: 1em 0;
+        }
+      }
+    }
+    .cake-label {
+      p {
+        font-size: 0.7em;
+      }
+    }
   }
   footer {
     .logo {
