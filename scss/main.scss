@@ -458,9 +458,9 @@ nav {
     clip-path: polygon(0 0, 100% 0, 100% 100%, calc(var(--cs)) 100%, 0 calc(100% - var(--cs)));
     outline: 5px dashed #555;
     outline-offset: -1rem;
-    background: #f1f3e7 /*url(../assets/webp/morning-escape-bg.webp) center center no-repeat*/;
+    background: #f1f3e7;
     position: relative;
-    &::after {
+    &::before {
       content: '';
       position: absolute;
       display: block;
@@ -469,6 +469,14 @@ nav {
       background-color: #fff;
       bottom: 0;
       left: 0;
+    }
+    &::after {
+      content: url(../assets/webp/wheat-big.webp);
+      position: absolute;
+      display: block;
+      bottom: -20px;
+      right: -40px;
+      z-index: -1;
     }
     p {
       display: inline-block;
@@ -481,6 +489,7 @@ nav {
     .morebreakfast {
       display: inline-block;
       border: #c3b091 solid 1px;
+      border-radius: 5px;
       padding: 1em 2em;
       margin-top: 4em;
       text-transform: uppercase;
@@ -488,6 +497,10 @@ nav {
       color: #c3b091;
       font-size: 1.5em;
       font-weight: bold;
+      &:hover {
+        background-color: rgba(69, 70, 53, 0.3);
+        color: #eee;
+      }
     }
     .container {
       display: flex;
@@ -720,6 +733,11 @@ footer {
         font-size: 1.5rem;
         padding: 0 2rem;
       }
+      &::after {
+        // width: 95%;
+        right: -5px;
+        overflow: hidden;
+      }
     }
   }
 }
@@ -732,7 +750,3 @@ footer {
     flex-direction: row;
   }
 }
-
-// * {
-//   border: solid #333 1px;
-// }
