@@ -1,4 +1,11 @@
 @charset "UTF-8";
+:root {
+  --cs: 55px;
+  font-family: 'Alegreya', serif; }
+
+section {
+  min-height: 100vh; }
+
 header {
   position: fixed;
   display: flex;
@@ -30,7 +37,6 @@ nav ul {
     margin: 0;
     text-transform: uppercase;
     padding-right: 1rem;
-    font-family: 'Alegreya SC', serif;
     font-size: 1.2rem; }
     nav ul li a:link {
       color: #fff; }
@@ -45,6 +51,8 @@ nav ul {
   cursor: pointer; }
   [for="menu-toggle"]:hover {
     text-decoration: underline; }
+  [for="menu-toggle"] .label {
+    display: none; }
 
 #menu-toggle {
   display: none; }
@@ -57,7 +65,6 @@ nav ul {
   padding-right: 0.7rem; }
 
 #hero {
-  min-height: 100vh;
   background: url(../assets/webp/hero.webp) no-repeat center center;
   box-shadow: inset 0 0 0 1000px rgba(69, 70, 53, 0.3);
   background-size: cover;
@@ -71,93 +78,36 @@ nav ul {
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.15em;
     text-align: center; }
-
-.wave {
-  height: 0.9rem;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto; }
-
-.bring {
-  align-self: center;
-  font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0.25em;
-  width: 50%;
-  text-align: center;
-  line-height: 2.5rem; }
-
-.menu {
-  width: fit-content;
-  align-self: center;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  padding: 1rem;
-  background-color: rgba(3, 3, 4, 0.3);
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif; }
-  .menu:hover {
-    background-color: rgba(3, 3, 4, 0.6); }
-
-.separator {
-  border: 0;
-  height: 81px;
-  width: 100%;
-  position: relative;
-  margin-bottom: -81px;
-  text-align: center; }
-  .separator img {
-    width: 100%; }
-
-.chef {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Alegreya', serif;
-  font-size: 3rem;
-  color: #555; }
-  .chef img {
-    margin: 0 2rem;
-    border-radius: 50%; }
-
-.name {
-  border-top: #555 solid 1px;
-  border-bottom: #555 solid 1px;
-  padding: 1rem 0; }
-
-.quote {
-  position: relative;
-  line-height: 5rem;
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  text-align: center;
-  color: #c3b091;
-  margin-top: 2rem;
-  letter-spacing: 0.3rem; }
-  .quote::before {
-    content: "“";
-    /* Real curly quotes */
-    font-size: 8rem;
-    color: #c3b091;
-    position: absolute;
-    left: 0;
-    top: 0; }
-  .quote::after {
-    content: "”";
-    /* Real curly quotes */
-    font-size: 8rem;
-    color: #c3b091;
-    position: absolute;
-    bottom: -5rem;
-    right: -2px; }
+  #hero .wave {
+    height: 0.9rem;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto; }
+  #hero .bring {
+    align-self: center;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.25em;
+    width: 50%;
+    text-align: center;
+    line-height: 2.5rem; }
+  #hero .menu {
+    width: fit-content;
+    align-self: center;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    padding: 1rem;
+    background-color: rgba(3, 3, 4, 0.3);
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif; }
+    #hero .menu:hover {
+      background-color: rgba(3, 3, 4, 0.6); }
 
 #art {
-  min-height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -181,7 +131,6 @@ nav ul {
   #art .left {
     padding: 0 2em; }
     #art .left h3 {
-      font-family: 'Alegreya', serif;
       font-size: 4rem;
       font-weight: 600;
       letter-spacing: 0.5rem;
@@ -189,17 +138,54 @@ nav ul {
       text-align: center;
       margin-bottom: 20px; }
     #art .left h4 {
-      font-family: 'Alegreya', serif;
       font-size: 1.7rem;
       text-transform: uppercase;
       color: #c3b091;
       text-align: center;
       margin-top: 0; }
     #art .left p {
-      font-family: 'Alegreya', serif;
       text-align: center;
       font-size: 2rem;
       color: #555; }
+    #art .left .chef {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      color: #555; }
+      #art .left .chef img {
+        margin: 0 2rem;
+        border-radius: 50%; }
+    #art .left .name {
+      border-top: #555 solid 1px;
+      border-bottom: #555 solid 1px;
+      padding: 1rem 0; }
+    #art .left .quote {
+      position: relative;
+      line-height: 5rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      text-align: center;
+      color: #c3b091;
+      margin-top: 2rem;
+      letter-spacing: 0.3rem; }
+      #art .left .quote::before {
+        content: "“";
+        /* Real curly quotes */
+        font-size: 8rem;
+        color: #c3b091;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      #art .left .quote::after {
+        content: "”";
+        /* Real curly quotes */
+        font-size: 8rem;
+        color: #c3b091;
+        position: absolute;
+        bottom: -5rem;
+        right: -2px; }
   #art .right {
     padding: 1rem;
     display: flex;
@@ -216,7 +202,6 @@ nav ul {
       background: url(../assets/webp/label.webp) no-repeat center center;
       display: flex;
       justify-content: center;
-      font-family: 'Alegreya', serif;
       align-content: center;
       align-items: center;
       text-align: center;
@@ -238,11 +223,7 @@ nav ul {
       #art .right .cake-label p {
         margin: 0 10%; }
 
-:root {
-  --cs: 55px; }
-
 #pancakes {
-  min-height: 100vh;
   height: fit-content;
   background: url(../assets/webp/pancakes.webp) no-repeat center center;
   background-size: cover;
@@ -288,7 +269,6 @@ nav ul {
       background: #fff url(../assets/webp/windmill.webp) no-repeat bottom right; }
       #pancakes .container .right .ready40 {
         position: absolute;
-        font-family: 'Alegreya', serif;
         height: 200px;
         width: 200px;
         top: -50px;
@@ -303,25 +283,21 @@ nav ul {
           text-transform: uppercase;
           font-size: 1.2em; }
         #pancakes .container .right .ready40 span {
-          font-family: 'Alegreya', serif;
           font-size: 3em;
           color: #a17737; }
       #pancakes .container .right h3 {
-        font-family: 'Alegreya', serif;
         font-size: 4rem;
         font-weight: 600;
         color: #555;
         text-align: left;
         margin-bottom: 20px; }
       #pancakes .container .right h4 {
-        font-family: 'Alegreya', serif;
         font-size: 1.7rem;
         text-transform: uppercase;
         color: #c3b091;
         text-align: left;
         margin-top: 0; }
       #pancakes .container .right p {
-        font-family: 'Alegreya', serif;
         text-align: center;
         font-size: 2rem;
         color: #555; }
@@ -347,7 +323,6 @@ nav ul {
               justify-self: center; }
 
 #breakfast {
-  min-height: 100vh;
   background: url(../assets/webp/breakfast.webp) no-repeat center center;
   box-shadow: inset 0 0 0 1000px rgba(69, 70, 53, 0.3);
   background-size: cover;
@@ -357,8 +332,7 @@ nav ul {
   padding: 5em; }
   #breakfast .left, #breakfast .right {
     width: 50%;
-    text-align: center;
-    font-family: 'Alegreya', serif; }
+    text-align: center; }
     #breakfast .left h3, #breakfast .right h3 {
       font-size: 3rem;
       font-weight: 800;
@@ -440,11 +414,9 @@ nav ul {
         font-weight: normal; }
 
 #sandwitch {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  font-family: 'Alegreya', serif; }
+  text-align: center; }
   #sandwitch .title {
     background: url(../assets/webp/jibarito-bg.webp) center top no-repeat;
     box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.7);
@@ -579,7 +551,6 @@ footer {
         padding-right: 1rem;
         padding-top: 1em;
         padding-bottom: 1em;
-        font-family: 'Alegreya SC', serif;
         font-size: 1.2rem;
         color: #555; }
         footer nav ul li a:link {
@@ -656,7 +627,6 @@ footer {
         footer nav ul li {
           text-transform: uppercase;
           padding-right: 0;
-          font-family: 'Alegreya SC', serif;
           font-size: 1.2rem;
           color: #555; }
           footer nav ul li a:link {
