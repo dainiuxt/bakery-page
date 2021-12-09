@@ -58,7 +58,7 @@ nav ul {
 
 #hero {
   min-height: 100vh;
-  background: url(../assets/webp/hero.png.webp) no-repeat center center;
+  background: url(../assets/webp/hero.webp) no-repeat center center;
   box-shadow: inset 0 0 0 1000px rgba(69, 70, 53, 0.3);
   background-size: cover;
   display: flex;
@@ -167,7 +167,7 @@ nav ul {
   #art .left, #art .right {
     width: 50%; }
   #art:before {
-    content: url("../assets/webp/bun.webp");
+    content: url(../assets/webp/bun.webp);
     width: 6rem;
     height: 6rem;
     background: #fff;
@@ -213,7 +213,7 @@ nav ul {
       outline-offset: -1rem;
       aspect-ratio: 1 / 1; }
     #art .right .cake-label {
-      background: url(../assets/webp/label.png.webp) no-repeat center center;
+      background: url(../assets/webp/label.webp) no-repeat center center;
       display: flex;
       justify-content: center;
       font-family: 'Alegreya', serif;
@@ -244,7 +244,7 @@ nav ul {
 #pancakes {
   min-height: 100vh;
   height: fit-content;
-  background: url(../assets/webp/pancakes.png.webp) no-repeat center center;
+  background: url(../assets/webp/pancakes.webp) no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -348,7 +348,7 @@ nav ul {
 
 #breakfast {
   min-height: 100vh;
-  background: url(../assets/webp/breakfast.png.webp) no-repeat center center;
+  background: url(../assets/webp/breakfast.webp) no-repeat center center;
   box-shadow: inset 0 0 0 1000px rgba(69, 70, 53, 0.3);
   background-size: cover;
   display: flex;
@@ -441,7 +441,110 @@ nav ul {
 
 #sandwitch {
   min-height: 100vh;
-  background-color: bisque; }
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Alegreya', serif; }
+  #sandwitch .title {
+    background: url(../assets/webp/jibarito-bg.webp) center top no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.7);
+    margin-top: 0.5em; }
+    #sandwitch .title h3 {
+      font-size: 4rem;
+      font-weight: 600;
+      color: #555;
+      margin-top: 1em;
+      margin-bottom: 0; }
+    #sandwitch .title h4 {
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      color: #c3b091;
+      margin-top: 0; }
+  #sandwitch .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    #sandwitch .container .left {
+      width: 20vw; }
+      #sandwitch .container .left img {
+        width: 25%;
+        border-radius: 100%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px; }
+      #sandwitch .container .left h5 {
+        font-size: 2em;
+        color: #c3b091;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em; }
+      #sandwitch .container .left p {
+        color: #555; }
+      #sandwitch .container .left .snack {
+        margin-bottom: 3em; }
+    #sandwitch .container .right {
+      width: 60vw;
+      display: flex;
+      align-items: center; }
+      #sandwitch .container .right .wrapper {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        align-items: center; }
+        #sandwitch .container .right .wrapper .image {
+          position: relative; }
+          #sandwitch .container .right .wrapper .image::before {
+            content: 'Full recipe';
+            color: #c3b091;
+            background-color: antiquewhite;
+            outline: #7a490e dashed 1px;
+            outline-offset: -0.3em;
+            width: 120px;
+            text-transform: uppercase;
+            position: absolute;
+            display: block;
+            padding: 1em;
+            z-index: 2;
+            bottom: -0.5em;
+            left: -0.7em; }
+          #sandwitch .container .right .wrapper .image img {
+            outline: #eee solid 0.7em;
+            outline-offset: -0.6em;
+            box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+            max-width: 100%; }
+      #sandwitch .container .right .labels {
+        width: 27%;
+        margin-left: -27%;
+        right: 0;
+        z-index: 2;
+        box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.8);
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column; }
+        #sandwitch .container .right .labels div {
+          align-items: center;
+          flex-grow: 1;
+          width: 100%; }
+          #sandwitch .container .right .labels div h6 {
+            color: #c3b091;
+            font-size: 1.5em;
+            margin: 1em auto; }
+          #sandwitch .container .right .labels div .number {
+            color: #555;
+            font-size: 3em;
+            font-weight: bold; }
+          #sandwitch .container .right .labels div .fifty {
+            color: #7a490e; }
+          #sandwitch .container .right .labels div p {
+            color: #7a490e;
+            font-weight: bold;
+            font-size: 1.3em; }
+        #sandwitch .container .right .labels .first {
+          border-bottom: #555 solid 1px; }
+        #sandwitch .container .right .labels .final {
+          background: url(../assets/webp/ready40bg.webp) center center no-repeat;
+          box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
+          background-size: cover; }
 
 footer {
   background-color: #fff;
@@ -513,6 +616,8 @@ footer {
       margin-bottom: 4em; }
     #breakfast .right .container {
       margin: 3em; }
+    #breakfast .right::after {
+      right: -20px; }
   .separator {
     display: none; }
   #pancakes {
@@ -524,6 +629,8 @@ footer {
       #pancakes .container .right {
         width: 100%;
         margin: 2em 0; }
+  #sandwitch .container .right img {
+    width: 55vw; }
   footer {
     display: flex;
     flex-direction: row;
@@ -591,7 +698,29 @@ footer {
     padding: 0 2rem; }
   #breakfast .right::after {
     right: -5px;
-    overflow: hidden; } }
+    overflow: hidden; }
+  #sandwitch {
+    padding: 2em; }
+    #sandwitch .container {
+      flex-direction: column; }
+      #sandwitch .container .left {
+        width: 100%; }
+      #sandwitch .container .right {
+        width: 100%; }
+        #sandwitch .container .right .wrapper {
+          flex-direction: column;
+          width: 100%; }
+          #sandwitch .container .right .wrapper img {
+            width: 85%; }
+          #sandwitch .container .right .wrapper .labels {
+            flex-direction: row;
+            background-color: #fff;
+            margin: 2em 0;
+            width: 100%; }
+            #sandwitch .container .right .wrapper .labels .first {
+              border: none; }
+            #sandwitch .container .right .wrapper .labels div {
+              width: 33%; } }
 
 @media screen and (min-width: 860px) {
   [for="menu-toggle"] {
