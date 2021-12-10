@@ -15,8 +15,10 @@
 </head>
 <body>
   <header>
-    <a class="logo" title="Go to homepage" href="/">Gustoso</a>
-    <nav id="primary">
+    <h1>
+      <a class="logo" title="Go to homepage" href="/">Gustoso</a>
+    </h1>
+    <nav id="primary" aria-label="primary site navigation">
       <label for="menu-toggle"><i class="fa-solid fa-bars"></i><span class="label">Menu toggler</span></label>
       <input type="checkbox" id="menu-toggle">
       <ul>
@@ -47,51 +49,53 @@
     </ul>
   </header>
 
-  <section id="hero">
-    <h1>Pastry with love</h1>
-    <img src="assets/webp/wave.webp" alt="dashed wawy line" class="wave">
-    <div class="bring">We’re bringing you fresh ingredients every day in ways you can’t resist!</div>
-    <a class="menu" href="#breakfast">Our menu</a>
-  </section>
-  <section id="art">
-    <div class="left">
-      <h3>Art of cakes</h3>
-      <h4>we create delicious memories</h4>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aspernatur explicabo magnam, pariatur voluptates aliquam ab ratione iusto doloribus obcaecati nihil consequatur veniam repellendus veritatis?</p>
-      <h4>Chef Cook</h4>
-      <div class="chef">
-        <div class="name">Benito</div>
-        <div><img src="assets/webp/benito.webp" alt="Chef Benito Gaspare"></div>
-        <div class="name">Gaspare</div>
+  <main>
+    <section id="hero">
+      <h2>Pastry with love</h2>
+      <img src="assets/webp/wave.webp" alt="dashed wawy line" class="wave">
+      <div class="bring">We’re bringing you fresh ingredients every day in ways you can’t resist!</div>
+      <a class="menu" href="#breakfast">Our menu</a>
+    </section>
+    <section id="art">
+      <div class="left">
+        <h3>Art of cakes</h3>
+        <h4>we create delicious memories</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aspernatur explicabo magnam, pariatur voluptates aliquam ab ratione iusto doloribus obcaecati nihil consequatur veniam repellendus veritatis?</p>
+        <h4>Chef Cook</h4>
+        <div class="chef">
+          <div class="name">Benito</div>
+          <div><img src="assets/webp/benito.webp" alt="Chef Benito Gaspare" loading="lazy"></div>
+          <div class="name">Gaspare</div>
+        </div>
+        <div class="quote">
+          Unique creations for unique occasions.
+        </div>
       </div>
-      <div class="quote">
-        Unique creations for unique occasions.
+      <div class="right">
+        <img src="assets/webp/flour.webp" alt="flour" loading="lazy">
+        <img src="assets/webp/egg.webp" alt="eggs" loading="lazy">
+        <img src="assets/webp/cake.webp" alt="chocko cake" loading="lazy">
+        <img src="assets/webp/strawberry.webp" alt="strawberries" loading="lazy">
+        <div class="cake-label"><p>Tastes so good!</p></div>
       </div>
-    </div>
-    <div class="right">
-      <img src="assets/webp/flour.webp" alt="flour">
-      <img src="assets/webp/egg.webp" alt="eggs">
-      <img src="assets/webp/cake.webp" alt="chocko cake">
-      <img src="assets/webp/strawberry.webp" alt="strawberries">
-      <div class="cake-label"><p>Tastes so good!</p></div>
-    </div>
-  </section>
+    </section>
+  </main>
   <section id="pancakes">
     <div class="container">
       <div class="left">
-        <img src="assets/webp/pancakes-with-jam.webp" alt="Pancakes with jam">
+        <img src="assets/webp/pancakes-with-jam.webp" alt="Pancakes with jam" loading="lazy">
       </div>
       <div class="right">
         <h3>Tasty pancakes</h3>
         <h4>Season favourite</h4>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aspernatur explicabo magnam, pariatur voluptates aliquam ab ratione iusto doloribus obcaecati nihil consequatur veniam repellendus veritatis?</p>
         <div class="carousel">
-          <div class="carousel-cell"><img src="assets/webp/berry.webp" alt="berries"></div>
-          <div class="carousel-cell"><img src="assets/webp/ham.webp" alt="ham"></div>
-          <div class="carousel-cell"><img src="assets/webp/lettuce.webp" alt="lettuce"></div>
-          <div class="carousel-cell"><img src="assets/webp/texture.webp" alt="oody texture"></div>
-          <div class="carousel-cell"><img src="assets/webp/berry.webp" alt="berries again"></div>
-          <div class="carousel-cell"><img src="assets/webp/ham.webp" alt="more ham"></div>
+          <div class="carousel-cell"><img src="assets/webp/berry.webp" alt="berries" loading="lazy"></div>
+          <div class="carousel-cell"><img src="assets/webp/ham.webp" alt="ham" loading="lazy"></div>
+          <div class="carousel-cell"><img src="assets/webp/lettuce.webp" alt="lettuce" loading="lazy"></div>
+          <div class="carousel-cell"><img src="assets/webp/texture.webp" alt="oody texture" loading="lazy"></div>
+          <div class="carousel-cell"><img src="assets/webp/berry.webp" alt="berries again" loading="lazy"></div>
+          <div class="carousel-cell"><img src="assets/webp/ham.webp" alt="more ham" loading="lazy"></div>
         </div>
         <div class="ready40">
           <span class="ready">Ready in</span><br><span>40</span><br>minutes
@@ -106,11 +110,11 @@
       <p class="menu-item">Full breakfast</p>
       <p class="description">Lorem ipsum dolor sit amet.</p>
       <p class="price">€8.49</p>
-      <img src="assets/webp/divider.webp" alt="small divider">
+      <img src="assets/webp/divider.webp" alt="small divider" loading="lazy">
       <p class="menu-item">Toast & Jam</p>
       <p class="description">Lorem ipsum dolor sit amet.</p>
       <p class="price">€4.49</p>
-      <img src="assets/webp/divider.webp" alt="small divider">
+      <img src="assets/webp/divider.webp" alt="small divider" loading="lazy">
       <p class="menu-item">Muffins</p>
       <p class="description">Lorem ipsum dolor sit amet.</p>
       <p class="price">€2.49</p>
@@ -135,17 +139,17 @@
     <div class="container">
       <div class="left">
         <div class="snack">
-          <img src="assets/webp/s-wheat.webp" alt="Wheat grains">
+          <img src="assets/webp/s-wheat.webp" alt="Wheat grains" loading="lazy">
           <h5>Class aptent</h5>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
         <div class="snack">
-          <img src="assets/webp/s-eggs.webp" alt="Eggs in a basket">
+          <img src="assets/webp/s-eggs.webp" alt="Eggs in a basket" loading="lazy">
           <h5>Nulla eget</h5>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
         <div class="snack">
-          <img src="assets/webp/s-cheese.webp" alt="Curd/goat cheese">
+          <img src="assets/webp/s-cheese.webp" alt="Curd/goat cheese" loading="lazy">
           <h5>Sed nibh purus</h5>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
@@ -153,7 +157,7 @@
       <div class="right">
         <div class="wrapper">
           <div class="image">
-            <img src="assets/webp/sandwich.webp" alt="Sandwich with ham and lettuce">
+            <img src="assets/webp/sandwich.webp" alt="Sandwich with ham and lettuce" loading="lazy">
           </div>
           <div class="labels">
             <div class="first">
